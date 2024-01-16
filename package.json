@@ -1,12 +1,13 @@
 {
   "name": "@baazaouihamza/react-reservation-range",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A react component for reservations",
   "scripts": {
-    "rollup": "rollup -c"
+    "rollup": "rollup -c --bundleConfigAsCjs"
   },
   "author": "Baazaoui Hamza",
   "license": "ISC",
+  "type": "module",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",

@@ -22,9 +22,7 @@ export default [
       },
     ],
     plugins: [
-      resolve({
-        fallback:{util:require.resolve('/util')}
-      }),
+      resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss(),
@@ -34,7 +32,7 @@ export default [
   {
     input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
-    plugins: [dts()],
-    external: [/\.css$/],
+    plugins: [dts.default()],
+    external: [/\.css$/,'react','react-dom'],
   },
 ];
