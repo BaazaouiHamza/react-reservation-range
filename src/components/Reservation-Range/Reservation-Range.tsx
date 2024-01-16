@@ -6,7 +6,7 @@ import "./Reservation-Range.css";
 import moment, { Moment } from "moment";
 import { CalendarDay, DateRangePicker, FocusedInputShape } from "react-dates";
 
-type Data = {
+export type Data = {
   allDay: boolean;
   end: string;
   start: string;
@@ -16,7 +16,7 @@ type Data = {
   className: string;
 };
 
-export type ReservationRangeProps = {
+type ReservationRangeProps = {
   startDate: Moment | null;
   endDate: Moment | null;
   setStartDate: React.Dispatch<React.SetStateAction<moment.Moment | null>>;
