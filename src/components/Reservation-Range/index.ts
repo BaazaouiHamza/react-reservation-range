@@ -1,1 +1,1 @@
-export {default,Data} from './Reservation-Range'
+export {default} from './Reservation-Range'
