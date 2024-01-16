@@ -22,12 +22,15 @@ export default [
       },
     ],
     plugins: [
-      resolve(),
+      resolve({
+        fallback:{util:require.resolve('/util')}
+      }),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       postcss(),
     ],
   },
+
   {
     input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
