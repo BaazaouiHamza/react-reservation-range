@@ -36,7 +36,7 @@
     "util": "^0.12.5"
   },
   "peerDependencies": {
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1"
+    "react": "file:../node_modules/react",
+    "react-dom": "file:../node_modules/react-dom"
   }
 }
