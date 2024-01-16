@@ -1,6 +1,6 @@
 {
   "name": "@baazaouihamza/react-reservation-range",
-  "version": "0.0.7",
+  "version": "0.0.10",
   "description": "A react component for reservations",
   "scripts": {
     "rollup": "rollup -c"

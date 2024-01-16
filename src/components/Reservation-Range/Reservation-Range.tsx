@@ -16,11 +16,12 @@ type Data = {
   className: string;
 };
 
-type ReservationRangeProps = {
+export type ReservationRangeProps = {
   startDate: Moment | null;
   endDate: Moment | null;
   setStartDate: React.Dispatch<React.SetStateAction<moment.Moment | null>>;
   setEndDate: React.Dispatch<React.SetStateAction<moment.Moment | null>>;
+  data: Data[];
 };
 
 const ReservationRange = ({
@@ -28,20 +29,12 @@ const ReservationRange = ({
   setStartDate,
   setEndDate,
   startDate,
+  data
 }: ReservationRangeProps) => {
   const [focusedInput, setFocusedInput] = useState<FocusedInputShape | null>(
     null
   );
-  const [data, setData] = useState<Data[]>([]); // Initialize data state as an empty array
 
-  useEffect(() => {
-    // Fetch data from the server
-    fetch("http://localhost:8080/api/data") // Assuming your server is running on the same host
-      .then((response) => response.json())
-      .then((data) => setData(data))
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []); // Empty dependency array means this effect will run once after the initial render
-  // Function to check if a day is the start or end date of any data
   const isStartOrEndDate = (day: Moment) =>
     data.some(
       ({ start, end }) =>
