@@ -1,6 +1,6 @@
 {
   "name": "@baazaouihamza/react-reservation-range",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A react component for reservations",
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs"
@@ -26,7 +26,8 @@
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "types": "dist/index.d.ts",
   "publishConfig": {
